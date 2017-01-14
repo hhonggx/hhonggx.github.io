@@ -2,37 +2,37 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <title>ubuntu安装resilio sync | Pilgrim个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- partial('google-analytics') %>
+  <meta name="description" content="1、安装resilio sync参照下面链接的文章进行安装：https://my.oschina.net/lieefu/blog/756614启动sudo systemctl start resilio-sync2、配置参考问答：http://askubuntu.com/questions/284683/how-to-run-bittorrent-sync其实就是在终端启动了rslsyncz之后，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu安装resilio sync">
+<meta property="og:url" content="http://hhonggx.github.io/2017/01/14/resilio-sync-install/index.html">
+<meta property="og:site_name" content="Pilgrim个人主页">
+<meta property="og:description" content="1、安装resilio sync参照下面链接的文章进行安装：https://my.oschina.net/lieefu/blog/756614启动sudo systemctl start resilio-sync2、配置参考问答：http://askubuntu.com/questions/284683/how-to-run-bittorrent-sync其实就是在终端启动了rslsyncz之后，">
+<meta property="og:image" content="http://hhonggx.github.io/home/pilgirm/图片/enterakey.png">
+<meta property="og:image" content="http://hhonggx.github.io/home/pilgirm/图片/manual.png">
+<meta property="og:image" content="http://hhonggx.github.io/home/pilgirm/图片/sync.png">
+<meta property="og:image" content="http://hhonggx.github.io/home/pilgirm/图片/bigdata.png">
+<meta property="og:updated_time" content="2017-01-14T15:06:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu安装resilio sync">
+<meta name="twitter:description" content="1、安装resilio sync参照下面链接的文章进行安装：https://my.oschina.net/lieefu/blog/756614启动sudo systemctl start resilio-sync2、配置参考问答：http://askubuntu.com/questions/284683/how-to-run-bittorrent-sync其实就是在终端启动了rslsyncz之后，">
+<meta name="twitter:image" content="http://hhonggx.github.io/home/pilgirm/图片/enterakey.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Pilgrim个人主页" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <!--  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  -->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
 </head>
 
 <body>

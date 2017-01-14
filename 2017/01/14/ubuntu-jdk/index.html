@@ -2,37 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <title>ubuntu下JAVA环境的配置 | Pilgrim个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- partial('google-analytics') %>
+  <meta name="description" content="1、Oracle JDK 的安装在Ubuntu和Linux Mint上安装Oracle JDK使用下面的命令安装，只需一些时间，它就会下载许多的文件，所及你要确保你的网络环境良好：123451. sudo add-apt-repository ppa:webupd8team/java2. sudo apt-get update3. sudo apt-get install oracle-java8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu下JAVA环境的配置">
+<meta property="og:url" content="http://hhonggx.github.io/2017/01/14/ubuntu-jdk/index.html">
+<meta property="og:site_name" content="Pilgrim个人主页">
+<meta property="og:description" content="1、Oracle JDK 的安装在Ubuntu和Linux Mint上安装Oracle JDK使用下面的命令安装，只需一些时间，它就会下载许多的文件，所及你要确保你的网络环境良好：123451. sudo add-apt-repository ppa:webupd8team/java2. sudo apt-get update3. sudo apt-get install oracle-java8">
+<meta property="og:updated_time" content="2017-01-14T12:33:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu下JAVA环境的配置">
+<meta name="twitter:description" content="1、Oracle JDK 的安装在Ubuntu和Linux Mint上安装Oracle JDK使用下面的命令安装，只需一些时间，它就会下载许多的文件，所及你要确保你的网络环境良好：123451. sudo add-apt-repository ppa:webupd8team/java2. sudo apt-get update3. sudo apt-get install oracle-java8">
+  
+    <link rel="alternate" href="/atom.xml" title="Pilgrim个人主页" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <!--  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  -->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
 </head>
 
 <body>
