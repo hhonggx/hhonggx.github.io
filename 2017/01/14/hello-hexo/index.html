@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ubuntu下JAVA环境的配置 | Pilgrim个人主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  
+</head>
+
+<body>
+  <nav class="app-nav">
+  
+    
+      <a href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2017/01/14/hello-hexo/">ubuntu下JAVA环境的配置</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">January 14 2017</p>
+  </section>
+
+  <section class="article-entry">
+    <h5 id="1、Oracle-JDK-的安装"><a href="#1、Oracle-JDK-的安装" class="headerlink" title="1、Oracle JDK 的安装"></a>1、Oracle JDK 的安装</h5><h6 id="在Ubuntu和Linux-Mint上安装Oracle-JDK"><a href="#在Ubuntu和Linux-Mint上安装Oracle-JDK" class="headerlink" title="在Ubuntu和Linux Mint上安装Oracle JDK"></a>在Ubuntu和Linux Mint上安装Oracle JDK</h6><p>使用下面的命令安装，只需一些时间，它就会下载许多的文件，所及你要确保你的网络环境良好：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. sudo add-apt-repository ppa:webupd8team/java</div><div class="line">2. sudo apt-get update</div><div class="line">3. sudo apt-get install oracle-java8-installer</div><div class="line">4. sudo apt-get install oracle-java8-set-default</div><div class="line">`</div></pre></td></tr></table></figure></p>
+<p>这个方法不需要再重新手动设置环境变量。</p>
+<p>网上搜的JDK安装位置：<br>详细位置搜索ubuntu系统jdk安装的默认路径。<br>在Eclipse里面设置jdk路径（这个不细说，不会自己搜）。<br>详细位置搜索ubuntu系统jdk安装的默认路径。</p>
+<p>或者按照如下方法，手动查找（机器不同可能结果也不一样，但思路都是一样的）：<br>which javac<br>返回/usr/bin/javac<br>file /usr/bin/javac<br>返回/usr/bin/javac: symbolic link to <code>/etc/alternatives/javac&#39;
+然后file /etc/alternatives/javac
+返回/etc/alternatives/javac: symbolic link to</code>/usr/lib/jvm/java-6-sun/bin/javac’<br>然后file /usr/lib/jvm/java-6-sun/bin/javac<br>返回/usr/lib/jvm/java-6-sun/bin/javac: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.2.5, not stripped<br>到此为止，说明路径是/usr/lib/jvm/java-6-sun/bin/，在Eclipse里面设置即可。</p>
+<p>我的电脑所在目录是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/lib/jvm/java-8-oracle/bin/</div></pre></td></tr></table></figure>
+<h5 id="2、安装eclipse"><a href="#2、安装eclipse" class="headerlink" title="2、安装eclipse"></a>2、安装eclipse</h5><p>到eclipse官网下载eclipse的tar.gz文件，将文件解压到硬盘上即可，使用“tar -xf” 命令进行解压操作，随后在终端运行eclipse.inst安装相应的IDE图形界面</p>
+<h5 id="3、安装tomcat"><a href="#3、安装tomcat" class="headerlink" title="3、安装tomcat"></a>3、安装tomcat</h5><p>直接用软件中心安装<br>配置tomcat<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">##添加jdk和jre环境变量</div><div class="line">JAVA_HOME=/usr/lib/jvm/java-8-oracle</div><div class="line">JRE_HOME=$JAVA_HOME/jre</div><div class="line">PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME</div><div class="line">CLASSPATH=.:$JRE_HOME/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</div><div class="line">TOMCAT_HOME=/usr/share/tomcat8</div></pre></td></tr></table></figure></p>
+<h5 id="4、安装MySQL"><a href="#4、安装MySQL" class="headerlink" title="4、安装MySQL"></a>4、安装MySQL</h5><p>直接用软件中心安装</p>
+
+  </section>
+</article>
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> Pilgrim个人主页 </p>
+      <p class="subtitle"> 一步步往前走，不断遇到更美的风景。 </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <!-- <p> share it if you like it~ </p> -->
+    <a
+  class="twitter-share-button"
+  data-size="large"
+  data-via="DrakeLeung"
+  href="https://twitter.com/intent/tweet?text= id="1、Oracle-JDK-的安"
+>
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'drakeleung';
+  
+  var disqus_url = 'http://hhonggx.github.io/2017/01/14/hello-hexo/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+</main>
+
+</body>
+</html>
